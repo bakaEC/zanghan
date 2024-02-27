@@ -1,0 +1,30 @@
+server:
+  port: 9190
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/health_in_XZ?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto #id自增
+  configuration:
+    map-underscore-to-camel-case: false
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+appid: wxbffeb09142f69ff1
+secret: dfe764c2e13aa0e0e18a8c236de3a4cb
+
+#logging.file.path=log
+
+#logging.level.com.swun.magepai.demo.module.mapper=debug
